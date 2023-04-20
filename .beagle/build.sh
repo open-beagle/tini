@@ -17,8 +17,7 @@ elif [ "$LOCAL_ARCH" = "aarch64" ]; then
 elif [ "$LOCAL_ARCH" = "loongarch64" ]; then
   TARGET_ARCH="loong64"
 elif [ "$(echo $LOCAL_ARCH | head -c 5)" = "ppc64" ]; then
-  # TARGET_ARCH="ppc64le"
-  TARGET_ARCH="unsupported"
+  TARGET_ARCH="ppc64le"
 elif [ "$(echo $LOCAL_ARCH | head -c 6)" = "mips64" ]; then
   TARGET_ARCH="mips64le"
 else
