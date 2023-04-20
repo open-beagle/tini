@@ -39,6 +39,24 @@ docker run -it --rm \
 -w /go/src/github.com/krallin/tini \
 registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-mips64le \
 bash .beagle/build.sh
+
+# loong64
+docker run -it --rm \
+-v $PWD/:/go/src/github.com/krallin/tini \
+-w /go/src/github.com/krallin/tini \
+cr.loongnix.cn/library/debian:buster \
+bash .beagle/build.sh
+
+docker build \
+  --build-arg BASE=registry-vpc.cn-qingdao.aliyuncs.com/wod/alpine:3-loong64 \
+  --build-arg AUTHOR=mengkzhaoyun@gmail.com \
+  --build-arg VERSION=v0.19.0 \
+  --build-arg TARGETOS=linux \
+  --build-arg TARGETARCH=loong64 \
+  --tag registry-vpc.cn-qingdao.aliyuncs.com/wod/tini:v0.19.0-loong64 \
+  --file ./.beagle/dockerfile .
+
+docker push registry-vpc.cn-qingdao.aliyuncs.com/wod/tini:v0.19.0-loong64
 ```
 
 ## test
