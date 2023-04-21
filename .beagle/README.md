@@ -48,7 +48,7 @@ cr.loongnix.cn/library/debian:buster \
 bash .beagle/build.sh
 
 docker build \
-  --build-arg BASE=registry-vpc.cn-qingdao.aliyuncs.com/wod/alpine:3-loong64 \
+  --build-arg BASE=registry-vpc.cn-qingdao.aliyuncs.com/wod/alpine:3-mips64le \
   --build-arg AUTHOR=mengkzhaoyun@gmail.com \
   --build-arg VERSION=v0.19.0 \
   --build-arg TARGETOS=linux \
