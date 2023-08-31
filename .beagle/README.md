@@ -15,7 +15,6 @@ git merge v0.19.0
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
--e TINI_VERSION=0.19.0-beagle \
 registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-amd64 \
 bash .beagle/build.sh
 
