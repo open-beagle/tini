@@ -11,6 +11,13 @@ git merge v0.19.0
 ## build
 
 ```bash
+# cross
+docker run -it --rm \
+-v $PWD/:/go/src/github.com/krallin/tini \
+-w /go/src/github.com/krallin/tini \
+registry.cn-qingdao.aliyuncs.com/wod/golang:1.21-loongnix \
+bash
+
 # amd64
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
@@ -44,10 +51,10 @@ docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
 cr.loongnix.cn/library/debian:buster \
-bash .beagle/build.sh
+bash .beagle/build.sh 
 
 docker build \
-  --build-arg BASE=registry-vpc.cn-qingdao.aliyuncs.com/wod/alpine:3-mips64le \
+  --build-arg BASE=registry-vpc.cn-qingdao.aliyuncs.com/wod/alpine:3-amd64 \
   --build-arg AUTHOR=mengkzhaoyun@gmail.com \
   --build-arg VERSION=v0.19.0 \
   --build-arg TARGETOS=linux \

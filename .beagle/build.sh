@@ -3,7 +3,7 @@
 set -ex
 
 apt-get update -y
-apt-get install -y cmake git
+apt-get install -y cmake git libc6-dev
 
 GITCOMMIT=${GITCOMMIT:-$(git rev-parse --short HEAD 2> /dev/null || true)}
 
