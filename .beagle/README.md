@@ -22,28 +22,28 @@ bash
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-amd64 \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-amd64 \
 bash .beagle/build.sh
 
 # arm64
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-arm64 \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-arm64 \
 bash .beagle/build.sh
 
 # ppc64le
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-ppc64le \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-ppc64le \
 bash .beagle/build.sh
 
 # mips64le
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-mips64le \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-mips64le \
 bash .beagle/build.sh
 
 # loong64
@@ -72,28 +72,28 @@ docker push registry-vpc.cn-qingdao.aliyuncs.com/wod/tini:v0.19.0-loong64
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-amd64 \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-amd64 \
 dist/linux-amd64/tini-static --version
 
 # arm64
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-amd64 \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-amd64 \
 dist/linux-arm64/tini-static --version
 
 # ppc64le
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-ppc64le \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-ppc64le \
 dist/linux-ppc64le/tini-static --version
 
 # mips64le
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-mips64le \
+registry.cn-qingdao.aliyuncs.com/wod/debian:buster-mips64le \
 dist/linux-mips64le/tini-static --version
 ```
 

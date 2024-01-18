@@ -36,22 +36,22 @@ steps:
         from_secret: SOCKS5_PROXY
 
   - name: cmake-amd64
-    image: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-amd64
+    image: registry.cn-qingdao.aliyuncs.com/wod/debian:buster-amd64
     commands:
       - bash .beagle/build.sh
 
   - name: cmake-arm64
-    image: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-arm64
+    image: registry.cn-qingdao.aliyuncs.com/wod/debian:buster-arm64
     commands:
       - bash .beagle/build.sh
 
   - name: cmake-ppc64le
-    image: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-ppc64le
+    image: registry.cn-qingdao.aliyuncs.com/wod/debian:buster-ppc64le
     commands:
       - bash .beagle/build.sh
 
   - name: cmake-mips64le
-    image: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye-mips64le
+    image: registry.cn-qingdao.aliyuncs.com/wod/debian:buster-mips64le
     commands:
       - bash .beagle/build.sh
 
