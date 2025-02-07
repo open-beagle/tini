@@ -15,7 +15,7 @@ git merge v0.19.0
 docker run -it --rm \
 -v $PWD/:/go/src/github.com/krallin/tini \
 -w /go/src/github.com/krallin/tini \
-registry.cn-qingdao.aliyuncs.com/wod/golang:1.21-loongnix \
+registry.cn-qingdao.aliyuncs.com/wod/golang:1.23-loongnix \
 bash
 
 # amd64
